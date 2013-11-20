@@ -1,0 +1,97 @@
+@import 'sass-bootstrap/lib/bootstrap';
+
+.hero-unit {
+  margin: 10px auto 0 auto;
+  width: 800px;
+  border: 1px solid grey;
+  border-radius: 3px;
+  box-shadow: 3px 2px 6px grey;
+}
+
+li {
+  margin: 4px 15px;
+  span {
+    vertical-align: text-bottom;
+  }
+  form {
+    display: none;
+  }
+}
+
+form {
+  margin-top: 20px;
+}
+
+ul,
+li form {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+.editing {
+    span {
+      display: none;
+    }
+
+    form {
+      display: inline-block;
+    }
+}
+
+input.form-control {
+    height: inherit;
+}
+
+input:checked ~ span {
+    text-decoration: line-through;
+}
+
+a.removeTodo {
+    background: url(/images/close.png) no-repeat;
+    display: none;
+    width: 21px;
+    height: 21px;
+    position: absolute;
+    margin-left: 4px;
+}
+
+li:hover a.removeTodo {
+    display: inline-block;
+    cursor: pointer;
+}
+
+section.todosBody {
+    padding: 20px 20px;
+}
+
+footer {
+    font-size: 12px;
+    padding: 20px;
+    background: cornsilk;
+    border-top: 1px solid grey;
+    border-radius: 0px 0px 3px 3px;
+}
+
+div.markAll {
+    margin: 10px 8px;
+    font-size: 20px;
+}
+
+div.remaining {
+  display: inline-block;
+  padding: 5px 10px;
+  background: antiquewhite;
+  border-radius: 3px;
+}
+
+div.completed {
+  display: inline-block;
+  float: right;
+  padding: 5px 10px;
+  background: antiquewhite;
+  border-radius: 3px;
+}
