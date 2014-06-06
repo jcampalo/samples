@@ -1,4 +1,4 @@
-samples
+Samples
 =======
 
-Some code samples made by myself in Javascript
+Some code samples in HTML, CSS and JavaScript.
