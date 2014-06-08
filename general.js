@@ -34,7 +34,7 @@ $(document).ready(function () {
 	$("#alert-terms-cond").hide();
 	$(".div-login").hide();
 	$("#btn-accept-terms-cond").click(function () {
-		$(location).attr('href',"bbvaweb-logged.php");
+		$(location).attr("href","bbvaweb-logged.php");
 		form.submit();
 	});
 
@@ -76,7 +76,7 @@ $(document).ready(function () {
 		if (e.keyCode != 37 && e.keyCode != 38 && e.keyCode != 39 && e.keyCode != 40){
 			showMenuList(".menu-password-search",".combo-pass-option","#lost-password-search");
 			prevVal = $(this).val();
-			if ($(".combo-pass-option").is(':visible') == 0) {
+			if ($(".combo-pass-option").is(":visible") == 0) {
 				$(".menu-password-search").hide();
 				$(".combo-pass-option").each(function () {
 					if ($(this).hasClass("option-selected"))
@@ -84,19 +84,19 @@ $(document).ready(function () {
 				});
 			}
 		} else {
-			if ($(this).val() != "") {
+			if ($(this).val().length > 0) {
 				/* left = 37  up = 38 right = 39 down = 40 enter = 13 */
 				var reallyFinded = false;
 				var count = 0;
 				$(".combo-pass-option").each(function() {
 					count++;
-					if ($(this).hasClass("option-selected") && $(this).is(':visible') && !$reallyFinded) {
+					if ($(this).hasClass("option-selected") && $(this).is(":visible") && !$reallyFinded) {
 						$(this).removeClass("option-selected");
 						if (e.keyCode == 39 || e.keyCode == 40)
 							$elem = $(this).next();
 						if (e.keyCode == 37 || e.keyCode == 38)
 							$elem = $(this).prev();
-						if ($elem.is(':visible')){
+						if ($elem.is(":visible")){
 							$("#lost-password-search").val($elem.children().text());
 							$elem.addClass("option-selected");
 						}
@@ -158,7 +158,7 @@ $(document).ready(function () {
 	});
 
 	$(".btn-user-disconnect").click(function () {
-		$(location).attr('href',"bbvaweb-initial.php");
+		$(location).attr("href","bbvaweb-initial.php");
 		form.submit();
 	});
 
@@ -175,7 +175,7 @@ $(document).ready(function () {
 		}
 	});
 
-	$(".agent").outside('click', function () {
+	$(".agent").outside("click", function () {
 		$(".agent-data").hide();
 		agentShowed = false;
 	});
@@ -190,7 +190,7 @@ $(document).ready(function () {
 	});
 
 	$(".combo-login").click(function () {
-		if ($(".menu-combo-login").hasClass('hidden')) {
+		if ($(".menu-combo-login").hasClass("hidden")) {
 			hideMenuComboLogin(false);
 		} else {
 			hideMenuComboLogin(true);
@@ -200,51 +200,51 @@ $(document).ready(function () {
 	$("#cmb-login-option1").click(function () {
 		$(".combo-content").text("Número de documento");
 		$("#document-acces").attr("placeholder","Número de documento");
-		$("#cmb-login-option1").addClass('option-selected');
-		$("#cmb-login-option2").removeClass('option-selected');
-		$("#cmb-login-option3").removeClass('option-selected');
-		$("#cmb-login-option4").removeClass('option-selected');
+		$("#cmb-login-option1").addClass("option-selected");
+		$("#cmb-login-option2").removeClass("option-selected");
+		$("#cmb-login-option3").removeClass("option-selected");
+		$("#cmb-login-option4").removeClass("option-selected");
 		hideMenuComboLogin(true);
 	});
 
 	$("#cmb-login-option2").click(function () {
 		$(".combo-content").text("Número de cuenta");
 		$("#document-acces").attr("placeholder","Número de cuenta");
-		$("#cmb-login-option2").addClass('option-selected');
-		$("#cmb-login-option1").removeClass('option-selected');
-		$("#cmb-login-option3").removeClass('option-selected');
-		$("#cmb-login-option4").removeClass('option-selected');
+		$("#cmb-login-option2").addClass("option-selected");
+		$("#cmb-login-option1").removeClass("option-selected");
+		$("#cmb-login-option3").removeClass("option-selected");
+		$("#cmb-login-option4").removeClass("option-selected");
 		hideMenuComboLogin(true);
 	});
 
 	$("#cmb-login-option3").click(function () {
 		$(".combo-content").text("Tarjeta de crédito");
 		$("#document-acces").attr("placeholder","Tarjeta de crédito");
-		$("#cmb-login-option3").addClass('option-selected');
-		$("#cmb-login-option2").removeClass('option-selected');
-		$("#cmb-login-option1").removeClass('option-selected');
-		$("#cmb-login-option4").removeClass('option-selected');
+		$("#cmb-login-option3").addClass("option-selected");
+		$("#cmb-login-option2").removeClass("option-selected");
+		$("#cmb-login-option1").removeClass("option-selected");
+		$("#cmb-login-option4").removeClass("option-selected");
 		hideMenuComboLogin(true);
 	});
 
 	$("#cmb-login-option4").click(function () {
 		$(".combo-content").text("Número de cliente");
 		$("#document-acces").attr("placeholder","Número de cliente");
-		$("#cmb-login-option4").addClass('option-selected');
-		$("#cmb-login-option2").removeClass('option-selected');
-		$("#cmb-login-option3").removeClass('option-selected');
-		$("#cmb-login-option1").removeClass('option-selected');
+		$("#cmb-login-option4").addClass("option-selected");
+		$("#cmb-login-option2").removeClass("option-selected");
+		$("#cmb-login-option3").removeClass("option-selected");
+		$("#cmb-login-option1").removeClass("option-selected");
 		hideMenuComboLogin(true);
 	});
 
-    $('#certification1, #certification2').hover(function () {
-      var currentImg = $(this).attr('src');
-      $(this).attr('src', $(this).attr('hover'));
-      $(this).attr('hover', currentImg);
+    $("#certification1, #certification2").hover(function () {
+      var currentImg = $(this).attr("src");
+      $(this).attr("src", $(this).attr("hover"));
+      $(this).attr("hover", currentImg);
     }, function() {
-      var currentImg = $(this).attr('src');
-      $(this).attr('src', $(this).attr('hover'));
-      $(this).attr('hover', currentImg);
+      var currentImg = $(this).attr("src");
+      $(this).attr("src", $(this).attr("hover"));
+      $(this).attr("hover", currentImg);
     });
 
 	$("#document-acces").change(function () {
@@ -262,33 +262,33 @@ $(document).ready(function () {
 	$("#env-login").click(function () {
 		hideMenuComboLogin(true);
 		var correct = true;
-		if ($("#document-acces").val() == "") {
+		if ($("#document-acces").val().length < 1) {
 			correct = false;
-			$("#document-acces").addClass('error');
+			$("#document-acces").addClass("error");
 		}
-		if ($("#pass-acces").val() == "") {
+		if ($("#pass-acces").val().length < 1) {
 			correct = false;
-			$("#pass-acces").addClass('error');
+			$("#pass-acces").addClass("error");
 		}
-		if ($("#captcha-field").val() == "") {
+		if ($("#captcha-field").val().length < 1) {
 			correct = false;
-			$("#captcha-field").addClass('error');
+			$("#captcha-field").addClass("error");
 		}
 		if (!correct) {
-			$(".msg-error-login").removeClass('hidden');
-			$(".acces-login-panel").addClass('error');
-			$(".content-login").addClass('error');
-			$("#title-cod-sec").addClass('error');
-			$(".menu-combo-login").addClass('error');
+			$(".msg-error-login").removeClass("hidden");
+			$(".acces-login-panel").addClass("error");
+			$(".content-login").addClass("error");
+			$("#title-cod-sec").addClass("error");
+			$(".menu-combo-login").addClass("error");
 		} else {
-			$(".msg-error-login").addClass('hidden');
-			$(".menu-combo-login").removeClass('error');
-			$(".acces-login-panel").removeClass('error');
-			$(".content-login").removeClass('error');
-			$("#title-cod-sec").removeClass('error');
-			$("#captcha-field").removeClass('requ');
-			$("#document-acces").removeClass('requ');
-			$("#pass-acces").removeClass('requ');
+			$(".msg-error-login").addClass("hidden");
+			$(".menu-combo-login").removeClass("error");
+			$(".acces-login-panel").removeClass("error");
+			$(".content-login").removeClass("error");
+			$("#title-cod-sec").removeClass("error");
+			$("#captcha-field").removeClass("requ");
+			$("#document-acces").removeClass("requ");
+			$("#pass-acces").removeClass("requ");
 			$("#termsCond").css("height",getDocHeight());
 			$("#termsCond").css("width",getDocWidth());
 			showElementTransition("#termsCond");
@@ -312,7 +312,7 @@ $(document).ready(function () {
 /* Show the menu if the chain matches with an option */
 showMenuList = function (menuToShow,menuOption,inputBox) {
 	var chain = $(inputBox).val().toLowerCase();
-	if (chain == "") {
+	if (chain.length < 1) {
 		$(menuToShow).hide();
 		$(menuOption).each(function () {
 			if ($(this).hasClass("option-selected"))
@@ -354,23 +354,23 @@ getDocWidth = function () {
 /* Hide the menu combo of login */
 hideMenuComboLogin = function (hide) {
 	if (hide) {
-		$(".menu-combo-login").addClass('hidden');
-		$(".combo-content").removeClass('selected');
-		$(".combo-arrow").removeClass('selected');
-		$(".combo-login").removeClass('selected');
+		$(".menu-combo-login").addClass("hidden");
+		$(".combo-content").removeClass("selected");
+		$(".combo-arrow").removeClass("selected");
+		$(".combo-login").removeClass("selected");
 	} else {
-		$(".menu-combo-login").removeClass('hidden');
-		$(".combo-content").addClass('selected');
-		$(".combo-arrow").addClass('selected');
-		$(".combo-login").addClass('selected');
+		$(".menu-combo-login").removeClass("hidden");
+		$(".combo-content").addClass("selected");
+		$(".combo-arrow").addClass("selected");
+		$(".combo-login").addClass("selected");
 	}
 }
 
 /* Check if the filed is empty */
 checkFieldOnChange = function (object) {
-	$(object).removeClass('error');
-	if ($(object).attr('value') != "") {
-		$(object).removeClass('requ');
+	$(object).removeClass("error");
+	if ($(object).attr("value").length > 0) {
+		$(object).removeClass("requ");
 	}
 }
 /* Show an element with a transition */
