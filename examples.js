@@ -111,7 +111,7 @@ function desformateaImporte (control) {
 function ventaInmovilizado() {
   	var valImpVeninMu = 0;
   	var signoImpVeninMu = "+";
-  	if ($("#imp_veninmu").val().indexOf("-") != -1) {
+  	if ($("#imp_veninmu").val().indexOf("-") !== -1) {
     	valImpVeninMu = desformateaImporte($("#imp_veninmu").val().substr(1,$("#imp_veninmu").val().length));
     	signoImpVeninMu = "-";
   	} else {
@@ -210,7 +210,7 @@ function checkInBalNetAct() {
 }
 
 function checkLupa() {
-  	if ($("#imp_veninmu").attr("class") != "CampoEntradaImporteError" && $("#imp_veninmu").val().length > 0){
+  	if ($("#imp_veninmu").attr("class") !== "CampoEntradaImporteError" && $("#imp_veninmu").val().length > 0){
     	$("#btnVentaInmovilizado").attr({"src":"/ataa_es_web_pub/images/BotonPrismaticoS.gif","disabled":"","tabindex":""}).css("cursor","hand");
   	} else {
     	$("#btnVentaInmovilizado").attr({"src":"/ataa_es_web_pub/images/BotonPrismaticoSoff.gif","disabled":"disabled","tabindex":"-1"}).css("cursor","default");
